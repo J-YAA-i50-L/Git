@@ -8,12 +8,7 @@ for i in range(h + 1):
         print()
     else:
         print('*', end='')
-        for j in range(b - 2):
-            if s[j] > 0:
-                print(' ', end='')
-            else:
-                print('*', end='')
-            s[j] = s[j] - 1
+        [print(' ', end='') if s[j] > 0 else print('*', end='') for j in range(b - 2)]
+        s = [s[j] - 1 for j in range(b - 2)]
         print('*', end='')
         print()
-
